@@ -1,0 +1,17 @@
+server {
+    listen *:80;
+    server_name "";
+    error_log /home/bitnami/Stepic/web/test.error.log;    
+
+    location ^~ /uploads/ {
+        root /home/bitnami/Stepic/web;
+    }
+
+    location ~* \.[a-zA-Z]+$  {
+        root /home/bitnami/Stepic/web/public;
+    }
+    
+#    location / {
+#        root /home/bitnami/Stepic/web;
+#    }
+}
