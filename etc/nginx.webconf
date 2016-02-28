@@ -4,15 +4,15 @@ upstream gunicorn {
 server {
     listen *:80;
     server_name "";
-    error_log /home/bitnami/Stepic/web/test.error.log;
-    access_log /home/bitnami/Stepic/web/test.access.log;    
+    error_log /home/box/web/test.error.log;
+    access_log /home/box/web/test.access.log;    
 
     location ^~ /uploads/ {
-        root /home/bitnami/Stepic/web;
+        root /home/box/web;
     }
 
-    location ~* \.[a-zA-Z]+$  {
-        root /home/bitnami/Stepic/web/public;
+    location ~* \.([a-z0-9]+)$  {
+        root /home/box/web/public;
     }
     
     location /hello/ {
@@ -22,6 +22,6 @@ server {
         proxy_redirect off;
     }
 #    location / {
-#        root /home/bitnami/Stepic/web;
+#        root /home/box/web;
 #    }
 }

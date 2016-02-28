@@ -1,0 +1,8 @@
+pythonpath="/home/bitnami/Stepic/web/"
+bind="0.0.0.0:8080"
+workers=2
+accesslog="/home/bitnami/Stepic/web/gunicorn.access.log"
+errorlog="/home/bitnami/Stepic/web/gunicorn.error.log"
+daemon=True
+'hello:app'
+
