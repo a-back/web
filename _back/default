@@ -18,10 +18,10 @@
 ##
 
 server {
-	#listen   80; ## listen for ipv4; this line is default and implied
-	#listen   [::]:80 default ipv6only=on; ## listen for ipv6
+	listen 80 default_server;
+	listen [::]:80 default_server ipv6only=on;
 
-	root /usr/share/nginx/www;
+	root /usr/share/nginx/html;
 	index index.html index.htm;
 
 	# Make site accessible from http://localhost/
@@ -29,23 +29,15 @@ server {
 
 	location / {
 		# First attempt to serve request as file, then
-		# as directory, then fall back to index.html
-		try_files $uri $uri/ /index.html;
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
 		# Uncomment to enable naxsi on this location
 		# include /etc/nginx/naxsi.rules
 	}
 
-	location /doc/ {
-		alias /usr/share/doc/;
-		autoindex on;
-		allow 127.0.0.1;
-		deny all;
-	}
-
-	# Only for nginx-naxsi : process denied requests
+	# Only for nginx-naxsi used with nginx-naxsi-ui : process denied requests
 	#location /RequestDenied {
-		# For example, return an error code
-		#return 418;
+	#	proxy_pass http://127.0.0.1:8080;    
 	#}
 
 	#error_page 404 /404.html;
@@ -54,7 +46,7 @@ server {
 	#
 	#error_page 500 502 503 504 /50x.html;
 	#location = /50x.html {
-	#	root /usr/share/nginx/www;
+	#	root /usr/share/nginx/html;
 	#}
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
@@ -90,7 +82,7 @@ server {
 #	index index.html index.htm;
 #
 #	location / {
-#		try_files $uri $uri/ /index.html;
+#		try_files $uri $uri/ =404;
 #	}
 #}
 
@@ -110,11 +102,11 @@ server {
 #
 #	ssl_session_timeout 5m;
 #
-#	ssl_protocols SSLv3 TLSv1;
-#	ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv3:+EXP;
+#	ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+#	ssl_ciphers "HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES";
 #	ssl_prefer_server_ciphers on;
 #
 #	location / {
-#		try_files $uri $uri/ /index.html;
+#		try_files $uri $uri/ =404;
 #	}
 #}

@@ -1,14 +1,13 @@
 CONFIG = {
     'mode': 'wsgi',
-    'command': '/usr/local/bin/gunicorn',
-    'working_dir': '/home/bitnami/Stepic/web',
+    'working_dir': '/home/box/web',
     'python': '/usr/bin/python',
     'args': (
         '--bind=0.0.0.0:8080',
         '--workers=4',
         '--daemon',
-        '--access-logfile=/home/bitnami/Stepic/web/gunicorn.access.log',
-        '--error-logfile=/home/bitnami/Stepic/web/gunicorn.error.log',
+        '--access-logfile=/home/box/web/gunicorn.access.log',
+        '--error-logfile=/home/box/web/gunicorn.error.log',
         'hello:app',
     ),
 }

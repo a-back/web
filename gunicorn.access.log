@@ -1,0 +1,5 @@
+"127.0.0.1 - - [08/Mar/2016:20:12:09] "GET /hello/?a=34&b=56&c=76 HTTP/1.0" 200 - "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
+"127.0.0.1 - - [08/Mar/2016:20:12:43] "GET /?a=34&b=56&c=76 HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
+"127.0.0.1 - - [08/Mar/2016:20:12:43] "GET /favicon.ico HTTP/1.1" 200 - "http://0.0.0.0:8080/?a=34&b=56&c=76" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
+"127.0.0.1 - - [08/Mar/2016:20:12:48] "GET /?a=34&b=56&c=7600 HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
+"127.0.0.1 - - [08/Mar/2016:20:12:48] "GET /favicon.ico HTTP/1.1" 200 - "http://0.0.0.0:8080/?a=34&b=56&c=7600" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
