@@ -1,5 +1,0 @@
-2016-03-09 00:39:56 [5791] [INFO] Starting gunicorn 17.5
-2016-03-09 00:39:56 [5791] [INFO] Listening at: http://0.0.0.0:8080 (5791)
-2016-03-09 00:39:56 [5791] [INFO] Using worker: sync
-2016-03-09 00:39:57 [5801] [INFO] Booting worker with pid: 5801
-2016-03-09 00:39:57 [5802] [INFO] Booting worker with pid: 5802

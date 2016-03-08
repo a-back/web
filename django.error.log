@@ -1,6 +1,0 @@
-2016-03-09 00:39:56 [5782] [INFO] Starting gunicorn 17.5
-2016-03-09 00:39:56 [5782] [INFO] Listening at: http://0.0.0.0:8000 (5782)
-2016-03-09 00:39:56 [5782] [INFO] Using worker: sync
-2016-03-09 00:39:56 [5788] [INFO] Booting worker with pid: 5788
-2016-03-09 00:39:56 [5789] [INFO] Booting worker with pid: 5789
-2016-03-09 00:39:56 [5793] [INFO] Booting worker with pid: 5793

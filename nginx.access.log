@@ -1,6 +1,0 @@
-127.0.0.1 - - [09/Mar/2016:00:42:42 +0600] "GET /popular/ HTTP/1.1" 200 33 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
-127.0.0.1 - - [09/Mar/2016:00:43:19 +0600] "GET /question/999888/ HTTP/1.1" 200 787 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
-127.0.0.1 - - [09/Mar/2016:00:44:34 +0600] "GET /hello/?a=34455&b=56000&c=76000&D=999000 HTTP/1.1" 200 44 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
-127.0.0.1 - - [09/Mar/2016:00:45:35 +0600] "GET /question/999888777/ HTTP/1.1" 200 772 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
-127.0.0.1 - - [09/Mar/2016:00:46:09 +0600] "GET /new/ HTTP/1.1" 200 33 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
-127.0.0.1 - - [09/Mar/2016:00:46:18 +0600] "GET /new1/ HTTP/1.1" 404 1024 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
