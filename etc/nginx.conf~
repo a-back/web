@@ -1,12 +1,9 @@
-upstream gunicorn {
-    server 0.0.0.0:8080;
-}
-
 upstream django {
     server 0.0.0.0:8000;
 }
-
-
+upstream gunicorn {
+    server 0.0.0.0:8080;
+}
 server {
     listen *:80;
     server_name "";

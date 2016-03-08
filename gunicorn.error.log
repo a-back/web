@@ -1,17 +1,5 @@
-2016-03-08 20:10:17 [8242] [INFO] Starting gunicorn 17.5
-2016-03-08 20:10:17 [8242] [INFO] Listening at: http://0.0.0.0:8080 (8242)
-2016-03-08 20:10:17 [8242] [INFO] Using worker: sync
-2016-03-08 20:10:17 [8251] [INFO] Booting worker with pid: 8251
-2016-03-08 20:10:17 [8252] [INFO] Booting worker with pid: 8252
-2016-03-08 20:10:17 [8253] [INFO] Booting worker with pid: 8253
-2016-03-08 20:10:17 [8254] [INFO] Booting worker with pid: 8254
-2016-03-08 20:13:19 [8242] [CRITICAL] WORKER TIMEOUT (pid:8251)
-2016-03-08 20:13:19 [8242] [CRITICAL] WORKER TIMEOUT (pid:8253)
-2016-03-08 20:13:19 [8330] [INFO] Booting worker with pid: 8330
-2016-03-08 20:13:19 [8331] [INFO] Booting worker with pid: 8331
-2016-03-08 20:15:56 [8242] [INFO] Handling signal: term
-2016-03-08 20:15:56 [8330] [INFO] Worker exiting (pid: 8330)
-2016-03-08 20:15:56 [8331] [INFO] Worker exiting (pid: 8331)
-2016-03-08 20:15:56 [8252] [INFO] Worker exiting (pid: 8252)
-2016-03-08 20:15:56 [8254] [INFO] Worker exiting (pid: 8254)
-2016-03-08 20:15:56 [8242] [INFO] Shutting down: Master
+2016-03-09 00:39:56 [5791] [INFO] Starting gunicorn 17.5
+2016-03-09 00:39:56 [5791] [INFO] Listening at: http://0.0.0.0:8080 (5791)
+2016-03-09 00:39:56 [5791] [INFO] Using worker: sync
+2016-03-09 00:39:57 [5801] [INFO] Booting worker with pid: 5801
+2016-03-09 00:39:57 [5802] [INFO] Booting worker with pid: 5802

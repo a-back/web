@@ -1,10 +1,10 @@
 CONFIG = {
     'mode': 'wsgi',
     'working_dir': '/home/box/web',
-    'python': '/usr/bin/python',
+#    'python': '/usr/bin/python',
     'args': (
         '--bind=0.0.0.0:8080',
-        '--workers=4',
+        '--workers=2',
         '--daemon',
         '--access-logfile=/home/box/web/gunicorn.access.log',
         '--error-logfile=/home/box/web/gunicorn.error.log',

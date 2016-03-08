@@ -1,2 +1,0 @@
-127.0.0.1 - - [08/Mar/2016:20:12:09 +0600] "GET /hello/?a=34&b=56&c=76 HTTP/1.1" 200 25 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
-127.0.0.1 - - [08/Mar/2016:20:12:10 +0600] "GET /favicon.ico HTTP/1.1" 404 208 "http://127.0.0.1/hello/?a=34&b=56&c=76" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36"
