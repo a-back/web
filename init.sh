@@ -16,7 +16,10 @@ sudo /etc/init.d/gunicorn restart
 #cd /home/box/web
 #sudo gunicorn -w 3 -b 0.0.0.0:8080 -D hello:app
 
+#----- MySQL -----
+sudo /etc/init.d/mysql restart
+
 #----- Test of run -----
 ps ax | grep nginx
 ps ax | grep gunicorn
-
+ps ax | grep mysql

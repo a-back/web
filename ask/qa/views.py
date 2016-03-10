@@ -7,4 +7,6 @@ def test(request, *args, **kwargs):
     return HttpResponse('OK')
 
 def quest(request, *args, **kwargs):
-    return HttpResponse(str(request))
+    id = kwargs['id']
+    resp = str(id) + '\n' + 'TETETER' + str(request.COOKIES)
+    return HttpResponse(resp)
