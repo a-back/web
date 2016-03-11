@@ -1,5 +1,0 @@
-[client]
-database = askdb
-user = user
-password = user
-default-character-set = utf8

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+{{ block.super }} – Популярные вопросы
+{% endblock %}
+{% block body %}
+      Популярные вопросы:
+      {% for question in questions %}
+      <p>  <a href="{% url 'question' question.id %}"> Заголовок: {{ question.title }} </a>  </p> 
+      Текст: {{ question.text }} 
+      Рейтинг: {{ question.rating }}, Автор: {{ question.author.get_username }}, Дата вопроса: {{ question.added_at}} <br>
+      {% endfor %}
+      <br> <hr>
+Страницы: &nbsp;
+      {% for p in paginator.page_range %}
+        {% if p == page.number %}
+           {{ p }} &nbsp;
+        {% else %}
+           <a href="{{ paginator.baseurl }}{{ p }}">{{ p }}</a> &nbsp; 
+        {% endif %}
+      {% endfor %}
+      <br> <hr>
+{% endblock %}

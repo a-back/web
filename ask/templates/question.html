@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+{{ block.super }} – Вопрос №{{ question.id }}
+{% endblock %}
+{% block body %}
+      Вопрос: <br>
+      <hr>
+
+      <p> Заголовок:     {{ question.title }} </p>
+      <p> Текст:     {{ question.text }} </p>
+      <p> Автор:     {{ user }} </p> 
+      <p> Дата вопроса:     {{ question.added_at }} </p> 
+      <hr>
+
+      Ответ(ы):
+      <hr>
+      {% for answer in answers %}
+      <div>
+      <p> Ответ:     {{ answer.text }} </p> 
+      
+      <p> Ответил:     {{ answer.author.get_username }} </p>    
+      <p> Дата ответа:     {{ answer.added_at }} </p> 
+      <hr>
+      </div> 
+      {% endfor %}
+{% endblock %}
+
