@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 class Question(models.Model):
     title = models.CharField(max_length=255)
@@ -12,9 +13,15 @@ class Question(models.Model):
 
     def __unicode__(self):
         return self.title
+    
+    def get_url(self):
+	return reverse('question', kwargs={'pk': self.id})
+        #return '/question/' + str(question.id) + '/'
 
-    class Meta:
-        ordering = ['added_at']
+#    class Meta:
+#        ordering = ['added_at']
+# add create
+# https://docs.djangoproject.com/en/1.9/ref/models/instances/
 
 
 
@@ -28,6 +35,10 @@ class Answer(models.Model):
     def __unicode__(self):
         return self.title
 
-    class Meta:
-        ordering = ['added_at']
+    def get_url(self):
+	return '/question/' + str(self.question.id) + '/'
+
+
+#    class Meta:
+#        ordering = ['added_at']
 

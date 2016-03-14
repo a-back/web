@@ -1,5 +1,8 @@
+#----- Common -----
+sudo apt-get update
+sudo apt-get install mc
+
 #----- Nginx -----
-#sudo rename /home/box/web/etc/nginx.webconf /home/box/web/etc/nginx.conf
 sudo rm /etc/nginx/sites-available/default
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
@@ -7,7 +10,6 @@ sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
 
 #----- Gunicorn -----
-#sudo rename /home/box/web/etc/helo.web /home/box/web/etc/hello
 sudo rm /etc/gunicorn.d/*.*
 sudo ln -s /home/box/web/etc/hello   /etc/gunicorn.d/test
 sudo ln -s /home/box/web/etc/django   /etc/gunicorn.d/django
@@ -23,3 +25,11 @@ sudo /etc/init.d/mysql restart
 ps ax | grep nginx
 ps ax | grep gunicorn
 ps ax | grep mysql
+
+#----- BD + superuser (web) -----
+./create_db.sh
+
+#----- Validate + syncdb -----
+cd ask
+./manage.py validate
+#./manage.py sybcdb

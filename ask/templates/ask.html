@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+{{ block.super }} – Задать вопрос
+{% endblock %}
+{% block body %}
+{% for e in form.non_fields.error %}
+      <div> {{ e }} </div>
+{% endfor %}      
+      <form method="post" action="/ask/">
+        {% csrf_token %}
+        <fieldset> 
+            {% for field in form %} 
+             <div>
+               <label> {{ field.label }} </label>
+               <div> {{ field }} </div>
+             </div>
+            {% endfor %}
+        </fieldset>
+        <div>
+           <button type="submit"> Сохранить </button>
+        </div> 
+      </form>
+{% endblock %}

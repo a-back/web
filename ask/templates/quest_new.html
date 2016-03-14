@@ -3,7 +3,7 @@
 {{ block.super }} – Новые вопросы
 {% endblock %}
 {% block body %}
-      Новый вопросы:
+      Новые вопросы:
       {% for question in questions %}
       <p>  <a href="{% url 'question' question.id %}"> Заголовок: {{ question.title }} </a>  </p> 
       Текст: {{ question.text }} 

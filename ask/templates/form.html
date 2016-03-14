@@ -1,0 +1,17 @@
+{% for e in form.non_fields.error %}
+      <div> {{ e }} </div>
+{% endfor %}      
+      <form method="post" action="/answer/">
+        {% csrf_token %}
+        <fieldset> 
+            {% for field in form %} 
+             <div>
+               <label> {{ field.label }} </label>
+               <div> {{ field }} </div>
+             </div>
+            {% endfor %}
+        </fieldset>
+        <div>
+           <button type="submit"> Сохранить </button>
+        </div> 
+      </form>
