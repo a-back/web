@@ -5,6 +5,10 @@
     <title>{% block title %}Stepic: Web-технологии{% endblock %}</title>
 </head>
 <body>
+<a href="{% url 'index'%}">Главная страница</a>
+<a href="{% url 'ask_add'%}">Задать вопрос</a> 
+<a href="{% url 'signup'%}">Регистрация</a>
+<a href="{% url 'login'%}">Авторизация</a>
 {% block body %}{% endblock %}
 </body>
 </html>

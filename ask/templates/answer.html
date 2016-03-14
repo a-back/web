@@ -4,5 +4,10 @@
 {% endblock %}
 
 {% block body %}
-	{% include "form.html" %}
+      {% if user.is_authenticated %}
+         Пользователь: {{ user.get_username }} <br>
+      {% else %}
+         Пользователь anonymous <br>
+      {% endif %}
+      {% include "form.html" %}
 {% endblock %}

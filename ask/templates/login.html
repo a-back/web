@@ -1,18 +1,12 @@
 {% extends "base.html" %}
 {% block title %}
-{{ block.super }} – Задать вопрос
+{{ block.super }} – Вход на сайт
 {% endblock %}
 {% block body %}
-      {% if user.is_authenticated %}
-         Пользователь: {{ user.get_username }} <br>
-      {% else %}
-         Пользователь anonymous <br>
-      {% endif %}
-      <hr>
 {% for e in form.non_fields.error %}
       <div> {{ e }} </div>
 {% endfor %}      
-      <form method="post" action="/ask/">
+      <form method="post" action="/login/">
         {% csrf_token %}
         <fieldset> 
             {% for field in form %} 
